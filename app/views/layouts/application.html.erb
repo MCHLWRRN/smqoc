@@ -1,14 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SMQOC</title>
+  <title>St. Mary Queen of Creation</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+	<script>
+		$(document).ready(function() {
+		  $('[data-toggle=offcanvas]').click(function() {
+		    $('.row-offcanvas').toggleClass('active');
+		  });
+		});
+	</script>
 </head>
 <body>
 
-<%= yield %>
+	<div id="wrap">
+		<div class="page-container">
+		  
+			<!-- top navbar -->
+		    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		       <div class="container">
+		    	<div class="navbar-header">
+		           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+		             <span class="icon-bar"></span>
+		             <span class="icon-bar"></span>
+		             <span class="icon-bar"></span>
+		           </button>
+		           <a class="navbar-brand" href="#">St. Mary's Queen of Creation</a>
+		    	</div>
+		       </div>
+		    </div>
+		      
+		    <div class="container">
+		      <div class="row row-offcanvas row-offcanvas-left">
+		        
+		        <!-- sidebar -->
+		        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		            <ul class="nav">
+		              <li class="active"><a href="#">Home</a></li>
+		              <li><a href="#">Welcome</a></li>
+		              <li><a href="#">Calendar</a></li>
+		              <li><a href="#">Catholics With Disabilities</a></li>
+		              <li><a href="#">Cemetery</a></li> 
+		              <li><a href="#">Christ Life</a></li> 
+		              <li><a href="#">Church Tour</a></li> 
+		              <li><a href="#">Faith Formation</a></li> 
+		              <li><a href="#">Festival Information</a></li> 
+		              <li><a href="#">Fr. John's Homilies</a></li> 
+		              <li><a href="#">Funerals</a></li> 
+		              <li><a href="#">Knights of Columbus</a></li> 
+		              <li><a href="#">Music Ministry</a></li> 
+		              <li><a href="#">Online Giving</a></li>
+		              <li><a href="#">Parish Bulletin</a></li>
+		              <li><a href="#">Parish Commissions</a></li> 
+		              <li><a href="#">Parish Info</a></li> 
+		              <li><a href="#">Photo Gallery</a></li> 
+		              <li><a href="#">Parish Outreach</a></li> 
+		              <li><a href="#">Religious Education</a></li> 
+		              <li><a href="#">Sacraments</a></li> 
+		              <li><a href="#">Safe Environment</a></li> 
+		              <li><a href="#">Stewardship</a></li> 
+		              <li><a href="#">Vocations</a></li> 
+		              <li><a href="#">Weddings</a></li>                  
+		            </ul>
+		        </div>
+		  	
+		        <!-- main area -->
+		        <div class="col-xs-12 col-sm-9">
+		          
+		          <%= yield %>
+		          
+		        </div><!-- /.col-xs-12 main -->
+		    </div><!--/.row-->
+		  </div><!--/.container-->
+		</div><!--/.page-container-->
+
+	</div>
+
+	<br class="clr" />
+
+	<div class='footer'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-md-3 col-sm-4 col-xs-6'>
+            <h4>Stewardship</h4>
+            <p><i>What we do, with what we have, when we believe!</p>
+            <br />
+            <p>&copy; 2015 St. Mary Queen of Creation</p>
+          </div>
+          <div class='col-md-offset-1 col-sm-2 col-xs-6'>
+            <h4>Links</h4>
+            <ul class='list-unstyled'>
+              <li><a href='#'>Link 1</a></li>
+              <li><a href='#'>Link 2</a></li>
+              <li><a href='#'>Link 3</a></li>
+            </ul>
+          </div>
+          <div class='clearfix visible-xs'></div>
+          <div class='col-sm-2 col-xs-6'>
+            <h4>More Links</h4>
+            <ul class='list-unstyled'>
+              <li><a href='#'>Link 4</a></li>
+              <li><a href='#'>Link 5</a></li>
+              <li><a href='#'>Link 6</a></li>
+            </ul>
+          </div>
+          <div class='col-md-3 col-md-offset-1 col-sm-4 col-xs-6'>
+            <h4>Contact Us</h4>
+            <ul class='list-unstyled'>              
+              <li>50931 Maria Avenue</li>
+              <li>New Baltimore, MI 48047</li>
+              <br />
+              <li><i class='glyphicon glyphicon-phone'></i><a href="tel: 586-725-2441">&nbsp;&nbsp; (586) 725-2441</a></li>
+              <li><i class='glyphicon glyphicon-envelope'><a href='mailto:hello@smqoc.com'> hello@smqoc.com</i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
 </body>
 </html>
